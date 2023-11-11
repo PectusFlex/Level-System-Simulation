@@ -8,14 +8,14 @@ max_level = 25
 
 ### DO NOT TOUCH THIS ###
 xp_linear = base_xp*k + a*(k*(k-1)/2)
-xp_exponential = (base_xp + k*a) * (1-pow(b, 30-k))/(1-b)
+xp_exponential = (base_xp + k*a) * (1-pow(b, max_level-k))/(1-b)
 total_xp = xp_linear + xp_exponential
 cutofflevel_linear = base_xp + a*k
 
 xp_nostreak = 151
 xp_2daystreak = xp_nostreak * 1.25
 xp_4daystreak = xp_nostreak * 1.5
-xp_level30 = 13363.5
+xp_level25 = 13363.5
 
 def xpNeededForNextLevelLinear(level):
     return base_xp + a*level
